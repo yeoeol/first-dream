@@ -5,7 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<button onclick="saveReq()">글작성</button>
+<button onclick="location.href='save.html'"
+        th:onclick="|location.href='@{/board/save}'|">글작성</button>
 
 <table>
     <tr>
@@ -48,10 +49,4 @@
 <a th:href="@{/board/paging(page=${boardList.totalPages})}">Last</a>
 
 </body>
-<script>
-    const saveReq = () => {
-        location.href = "/board/save";
-    }
-
-</script>
 </html>
